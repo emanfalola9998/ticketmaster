@@ -1,0 +1,40 @@
+.employee__content{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    // 5 on row by 2 column
+    // each employee card itself will be display:flex -column
+    &-card{
+        display:flex;
+        flex-direction: column;
+        // border: 2px solid green;
+        &__name, &__role { // Separate selectors with a comma
+            text-align: left;
+        }
+        &__counter{
+            // border:2px solid blue;gti add
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            &-buttons{
+                display:flex;
+                // border: 2px solid yellow;
+                justify-content: center;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+// employee-card__name
+// employee-card__role
+//     employee-card__counter
+//     employee-card__counter-heading
+//     number
+//     + -
