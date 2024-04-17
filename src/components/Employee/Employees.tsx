@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./Employees.scss";
 import { Employee } from "../../types/employee";
+import { Outlet, Link } from "react-router-dom";
+
 
 type EmployeeProps = {
   employees: Employee[];
 };
 
 const Employees = ({ employees }: EmployeeProps) => {
-  // State for counter values, initialized with 0 for each employee
   const [counters, setCounters] = useState<number[]>(Array(employees.length).fill(0));
 
   const handleIncrement = (index: number) => {
@@ -25,13 +26,26 @@ const Employees = ({ employees }: EmployeeProps) => {
   };
 
   return (
+    
     <div className="employee">
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+        </ul>
+      </nav>
+
       <h1 className="employee__heading">Ticket Tracker</h1>
       <div className="employee__content">
       {employees.map((employee: Employee, index: number) => (
         <div key={employee.id} className="employee__content-card">
-          <h3 className="employee__content-card__name">{employee.name}</h3>
-          <h3 className="employee__content-card__role">{employee.role}</h3>
+        <p>
+          <Link to={`/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
+        </p>          <h3 className="employee__content-card__role">{employee.role}</h3>
           <div className="employee__content-card__counter">
             <h3 className="employee__content-card__counter-heading">Counter</h3>
             {counters[index]}
