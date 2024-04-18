@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import team from "./data/team";
 import './App.css';
 import Employees from './components/Employee/Employees';

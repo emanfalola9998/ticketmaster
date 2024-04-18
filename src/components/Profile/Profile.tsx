@@ -1,4 +1,3 @@
-import React from 'react';
 import { Employee } from '../../types/employee';
 import { Link, useParams } from 'react-router-dom';
 import './Profile.scss'
@@ -8,7 +7,12 @@ type ProfileProps = {
 };
 
 const Profile = ({ employees }: ProfileProps) => {
-    const { id } = useParams<{ id: string }>();
+    const { id } = useParams<{ id: string| undefined }>();
+
+
+    if (!id || isNaN(parseInt(id))) {
+        return <div>User not found</div>;
+    }
     const profile = employees.find(employee => employee.id === parseInt(id));
 
     if (!profile) {

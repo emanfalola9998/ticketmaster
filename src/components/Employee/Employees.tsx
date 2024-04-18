@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Employees.scss";
 import { Employee } from "../../types/employee";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 type EmployeeProps = {
@@ -62,5 +62,7 @@ const Employees = ({ employees }: EmployeeProps) => {
 };
 
 export default Employees;
+
+
 
 
