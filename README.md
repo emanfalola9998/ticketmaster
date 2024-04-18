@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# Ticket Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a ticket tracker application built using TypeScript for the logic, HTML for the structure, and SCSS for the styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Ticket List**: Display a list of all tickets with their details.
+- **Responsive Design**: The application is designed to be responsive and work well on different screen sizes.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **TypeScript**: Used for writing the logic and functionality of the application.
+- **HTML**: Provides the structure and layout of the web pages.
+- **SCSS**: Used for styling the user interface and making it visually appealing.
+- **Webpack**: Bundles the TypeScript files and compiles SCSS into CSS.
+- **LocalStorage**: Stores ticket data locally to maintain state between sessions.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To run the application locally, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository: 
+2. Navigate to the project directory: `cd ticket-tracker`
+3. Install dependencies: `npm install`
+4. Build the project: `npm run build`
+5. Start the development server: `npm start`
+
+## Folder Structure
+
+- **src/**: Contains the source code files.
+  - **components/**: Contains reusable UI components used across the application.
+  - **styles/**: Contains SCSS files for styling the application.
+  - **utils/**: Utility functions and helper modules.
+- **dist/**: Output directory where compiled TypeScript and SCSS files are placed.
+- **index.html**: Main HTML file that serves as the entry point to the application.
+- **webpack.config.js**: Webpack configuration file for bundling and compiling assets.
+
