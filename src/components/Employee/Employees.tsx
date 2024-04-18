@@ -43,7 +43,7 @@ const Employees = ({ employees }: EmployeeProps) => {
       <div className="employee__content">
       {employees.map((employee: Employee, index: number) => (
         <div key={employee.id} className="employee__content-card">
-        <p>
+        <p className="employee__content-card__name">
           <Link to={`/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
         </p>          <h3 className="employee__content-card__role">{employee.role}</h3>
           <div className="employee__content-card__counter">
