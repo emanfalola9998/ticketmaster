@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+
+.profile__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-for-desktop;
+    margin: $margin-for-desktop;
+    // border: 2px solid green;
+
+    &__nav {
+        justify-content: space-around;
+        background-color: $secondary-background-colour;
+        border-radius: 6px;
+        border: $secondary-border;
+
+        &-link {
+            background-color: $secondary-background-colour;
+        }
+        &-button {
+            // border-radius: 3px;
+            // border: $secondary-border;
+            background-color: transparent;
+        }
+    }
+}

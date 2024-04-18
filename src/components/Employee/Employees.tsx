@@ -26,17 +26,9 @@ const Employees = ({ employees }: EmployeeProps) => {
   };
 
   return (
-    
     <div className="employee">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/ticketmaster">Home</Link>
-          </li>
-          <li>
-            <Link to="/ticketmaster/profile">Profile</Link>
-          </li>
-        </ul>
+      <nav className="employee__nav">
+            <a className="employee__nav-link" href="#"> <Link to="/ticketmaster">Home</Link></a>
       </nav>
 
       <h1 className="employee__heading">Ticket Tracker</h1>
