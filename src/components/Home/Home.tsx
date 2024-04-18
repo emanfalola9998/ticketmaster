@@ -12,16 +12,16 @@ const Home = ({ employees }: EmployeesProps) => {
       <nav>
         <ul>
           <li>
-            <Link to="/employees">Employees</Link>
+            <Link to="/ticketmaster/employees">Employees</Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/ticketmaster/profile">Profile</Link>
           </li>
         </ul>
       </nav>
       {employees.map(employee => 
         <p key={employee.id}>
-          <Link to={`/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
+          <Link to={`/ticketmaster/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
         </p>
       )}
     </div>

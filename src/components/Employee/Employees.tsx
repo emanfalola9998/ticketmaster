@@ -31,10 +31,10 @@ const Employees = ({ employees }: EmployeeProps) => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/ticketmaster">Home</Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/ticketmaster/profile">Profile</Link>
           </li>
         </ul>
       </nav>
@@ -44,7 +44,7 @@ const Employees = ({ employees }: EmployeeProps) => {
       {employees.map((employee: Employee, index: number) => (
         <div key={employee.id} className="employee__content-card">
         <p className="employee__content-card__name">
-          <Link to={`/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
+        <Link to={`/ticketmaster/profile/${employee.id}`}>{employee.id} {employee.name}</Link>
         </p>          <h3 className="employee__content-card__role">{employee.role}</h3>
           <div className="employee__content-card__counter">
             <h3 className="employee__content-card__counter-heading">Counter</h3>

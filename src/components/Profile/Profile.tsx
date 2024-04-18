@@ -7,7 +7,7 @@ type ProfileProps = {
 };
 
 const Profile = ({ employees }: ProfileProps) => {
-    const { id } = useParams<{ id: string| undefined }>();
+    const { id } = useParams<{ id: string }>();
 
 
     if (!id || isNaN(parseInt(id))) {
@@ -21,9 +21,10 @@ const Profile = ({ employees }: ProfileProps) => {
 
     return (
         <div>
+            <h3>Welcome to Profile Navigate back to get a profile by selecting one from the employees or Home page</h3>
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/employees">Employees</Link>
+                <Link to="/ticketmaster">Home</Link>
+                <Link to="/ticketmaster/employees">Employees</Link>
             </nav>
             <br></br>
             <div className='profile'>

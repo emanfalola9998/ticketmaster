@@ -9,9 +9,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home employees={team} />}></Route>
-        <Route path="employees" element={<Employees employees={team} />} />
-        <Route path="profile/:id" element={<Profile employees={team} />} />
+        <Route path="/ticketmaster/" element={<Home employees={team} />}></Route>
+        <Route path="ticketmaster/employees" element={<Employees employees={team} />} />
+        <Route path="ticketmaster/profile/:id" element={<Profile employees={team} />} />
       </Routes>
     </BrowserRouter>
   );
